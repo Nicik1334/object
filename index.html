@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<script src="./js/jquery.js"></script>
+<style>
+
+</style>
+
+<body>
+    <div class="box">
+        <div class="turntable"></div>
+        <div class="start"><i></i></div>
+    </div>
+    <script>
+        var arr = [{
+            p: '京东卡10元',
+            ind: 1
+        }, {
+            p: '京东卡20元',
+            ind: 2
+        }, {
+            p: '京东卡50元',
+            ind: 3
+        }, {
+            p: '京东卡100元',
+            ind: 4
+        }, {
+            p: '谢谢参与',
+            ind: 5
+        }, {
+            p: '京东卡200元',
+            ind: 6
+        }, {
+            p: '京东卡500元',
+            ind: 7
+        }, {
+            p: 'huawei',
+            ind: 8
+        }]
+
+        class turntable {
+            constructor(turntable, start, arr, number, second) {
+                this.turntabled = turntabled  //定义需要旋转的标签
+                this.start = start; //定义开始按钮
+                this.arr = arr //定义一个数组
+                this.number = number //定义一个旋转的圈数,默认为5
+                this.second = second //定义一个旋转的总时长,默认为6
+                this.angle = 0 //需要旋转的角度number圈+随机角度
+                this.num = 0 //定义一个随机角度
+                this.Certain = 0 //结果输出的第几个奖品
+                this.flag = true;
+            }
+            ined() {
+                this.spans();
+                this.clik()
+            }
+            spans() { //添加一个创建标签的方法,形参为需要添加的奖品数组
+                for (var i = 0; i < this.arr.length; i++) {
+                    let item = `<span>
+                        <div>
+                        <p>${this.arr[i].p}</p><img src="img/lottery_0${this.arr[i].ind}.png" alt="">
+                        </div>
+                            </span>`
+                        this.turntabled.append(item)
+                }
+            }
+            clik() { //添加一个点击事件的方法
+                this.start.click(() => { //开始转盘的点击事件
+                    if (this.flag) {
+                        this.flag = false
+                        this.Luckdraw() //调用旋转方法
+                        //第一个参数旋转圈数,默认为5,第二个参数旋转的总时长,默认为6 
+                        setTimeout(() => {
+                            this.flag = true
+                            this.getPrize()
+                        }, this.second * 1000)
+                    }
+                })
+            }
+            Luckdraw() { //添加一个抽奖方法
+                this.num = Number((Math.random() * 360).toFixed(0)) //随机角度
+                this.number === undefined ? this.number : 5 //圈数默认值
+                this.second === undefined ? this.second : 6 //秒速默认值
+                this.angle = -(360 * this.number + this.num) //需要旋转的角度number圈+随机角度
+                this.turntabled.css({
+                    'transition': `all ${this.second}s ease-in-out`,
+                    'transform': `rotate(${this.angle}deg)`
+                })
+            }
+            getPrize() { //弹出奖品的方法
+                this.Certain = Math.ceil(this.num / 45) - 1 //第几个奖品
+                if ((this.arr[this.Certain].p).length === 4) {
+                    alert(this.arr[this.Certain].p + '希望下次光临!')
+                } else {
+                    alert('恭喜你获得:' + this.arr[this.Certain].p + '!!!')
+                }
+                this.turntabled.css({
+                    'transition': '0s',
+                    'transform': `rotate(${this.angle%360}deg)`
+                })
+            }
+        }
+        let start = $('.start')
+        let turntabled = $('.turntable')
+        let turntables = new turntable(turntabled,start, arr, 4, 2);
+        turntables.ined()
+        console.log(turntables);
+    </script>
+</body>
+
+</html>
