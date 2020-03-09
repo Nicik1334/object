@@ -1,107 +1,345 @@
-* {
-    margin: 0;
-    padding: 0;
+body{
+	font-weight: 400;
+	font-family: "Microsoft YaHei", 微软雅黑, SimHei, 黑体, "PingFang SC","Noto Sans";
+	color: rgb(68, 68, 68);
+	transition: all 1s linear;
+}
+a{
+	text-decoration: none;
+	color: #818180;
+}
+a:hover{
+	text-decoration: none;
+	color: #818180;
+	
+}
+li{
+	list-style: none;
+}
+	
+.box{
+	padding: 0;
+	
+}
+.header-meta{
+	height: 34px;
+	background-color: white;
+	padding: 0 5%;
+}
+.header-meta a{
+	display: block;
+	float: right;
+	color: #818180;
+	font-size: 12px;
+	margin: 0 20px;
+	line-height: 34px;
+}
+.header-content{
+	background-color: white;
+	padding: 10px 5%;
+	transition: all .5s linear;
+	width: 100%;
+}
+.header-logo{
+	height: 51px;
+	width: 84px;
+	margin: 0 auto;
+}
+.header{
+	background-color: white;
+}
+.header-icons a{
+	float: right;
+	display: inline-block;
+	line-height: 45px;
+	margin-left: 10px;
+}
+.header-icons a span{
+	float: right;
+	display: block;
+	margin: 0 10px;
 }
 
-.box {
-    width: 1000px;
-    height: 700px;
-    margin: 100px auto;
-    position: relative;
-    overflow: hidden;
-    border: 2px #ccc solid;
-    border-radius: 20px;
+.header-search{
+	position: relative;
+	line-height: 45px;
 }
 
-.box .turntable {
-    width: 510px;
-    height: 510px;
-    border-radius: 50%;
-    margin: 99px auto;
-    background: url(../img/bg_lottery_f.png);
-    position: relative;
-    overflow: hidden;
-    border: 10px solid rgb(27, 74, 112);
-    transition: all 5s ease-in-out;
+.header-search input{
+	width: 135px;
+	height: 40px;
+	display: block;
+	 padding: 5px 5px 5px 40px;
+	 border: 1px solid #959595;
+	 outline: none;
+	 float: left;
+	 margin-top: 5px;
+}
+.header-content .header-search input::after{
+	content:"XXXX";
+	display: block;
+	width: 28px;
+	height: 28px;
+	background-color: red;
+	
+}
+.navigation{
+	width: 100px;
+	float: left;
+	cursor: pointer;
+	color: #818180;
+}
+.tray-scroll-wrap{
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	z-index: 100;
+}
+.scrleft{
+	background-color: white;
+	height: auto;
+	padding: 0;
+}
+.scrright{
+	background-color: #16181B;
+	opacity: .3;
+	margin: 0;
+}
+.scrleft .tray-content-wrapper{
+	width: 100%;
+	height: 860px;
+	padding: 5% 20%;
+}
+.scrleft .tray-content-wrapper ul li{
+	width: 100%;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.scrleft .tray-content-wrapper .shop{
+	font-size: 30px;
+	text-indent: .5em;
+	cursor: pointer;
+}
+.scrleft .institutional-nav-wrapper{
+	height: 180px;
+	padding: 20px 10%;
+	background-color: rgb(246, 241, 235);
+	margin-top: 20px;
+	
+}
+.scrleft .institutional-nav-wrapper a{
+	display: block;
+	margin: 0 auto;
+	width: 305px;
+	height: 50px;
 }
 
-.box .start {
-    position: absolute;
-    width: 131px;
-    height: 131px;
+.spectrum div:nth-child(2){
+	font-family: 幼圆;
+}
+/* .block-push div:nth-child(2) div{
+	float: left;
+} */
+.box{
+	background-color: #F6F1EB;
+	font-family: 幼圆;
+}
+
+.ballet{
+	margin: 70px 0;
+}
+.spectrum{
+	margin: 50px 0;
+}
+.heart{
+	margin: 50px 0;
+}
+.continued{
+	margin: 50px 0;
+}
+.continued div div div div:nth-child(2){
+	    font-size: 18px;
+	    margin: 10px 0;
+}
+.continued div div div div:nth-child(3){
+	    font-size: 14px;
+	    text-align: left;
+	    text-indent: 1em;
+	    color: #ccc;
+}
+.continued div div div:nth-child(1){
+	margin-bottom: 10px;
+}
+	
+.products div div div:nth-child(2){
+	font-size: 18px;
+	margin: 10px 0;
+}
+.products div div div:nth-child(3){
+	font-size: 14px;
+	text-align: left;
+	text-indent: 1em;
+	color: #ccc;
+}
+.products div div:nth-child(1){
+	margin-bottom: 20px;
+}
+.help{
+	background-color: white;
+	font-size: 14px;
+}
+.help div div div:nth-child(1){
+	font-weight: 600;
+}
+.help{
+	border-bottom: 1px solid #ccc;
+}
+.footer{
+	padding-bottom: 100px;
+	padding-top: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.footer .bottoms{
+	width: 35%;
+	height: 50px;
+	cursor: pointer;
+	line-height: 50px;
+	font-size: 14px;
+	color: white;
+	border-radius: 10px;
+	background-color: #444444;
+	margin: 20px auto;
+}
+.foot-left div div:nth-child(1){
+	font-size: 16px;
+	font-weight: 600;
+}
+.foot-left div div{
+	margin: 10px 0;
+	font-family: 幼圆;
+	
+}
+
+.titleft {
+	font-size: 12px;
+	float: left;
+}
+.titright i{
+	font-size: 24px;
+	margin: 0 10px;
+	float: right;
+}
+.footer-bott{
+	height: 250px;
+	position: relative;
+	margin-top: 20px;
+}
+.footer-bott div:nth-child(3){
+	text-align: left;
+	padding-top: 24px;
+	color: #414141;
+	text-decoration: inherit;
+	font-size: 12px;
+}
+.footer-bott .imds{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+
+.foots{
+	background-color: white;
+	margin: 0;
+}
+
+.lgs{
+	  border-radius: 10px;
+	  
+  }
+
+
+
+@media screen and (min-width: 992px) {
+  .aside{
+    position: fixed;
     top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .desc-box{
+    height: calc(100% - 60px);
+  }
+
+  .desc-content{
+    position: absolute;
+    height: 100px;
     left: 0;
     right: 0;
     bottom: 0;
+    top: 0;
     margin: auto;
-    background: url(../img/btn_lottery.png) no-repeat center/100% 100%;
+    margin-left: 56px;
+  }
+
+  .teach{
+    min-width: 800px;
+  }
+  .lgs{
+  	width: 100%;
+  	margin-top: 30px;
+  	margin-bottom: 10px; 
+  }
+  .lgw{
+  	  width: 100%;
+  	  height: auto;
+  }
 }
 
-.box .start i {
-    background: url(../img/icon_point.png);
-    position: absolute;
-    width: 41px;
-    height: 39px;
-    left: 42.5px;
-    top: -32px;
+
+
+/* 平板端 */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .lgs{
+		width: 100%;
+		margin-top: 30px;
+		margin-bottom: 10px; 
+	}
+	.lgw{
+		  width: 100%;
+		  height: auto;
+	}
 }
 
-.box .turntable span {
-    position: absolute;
-    width: 255px;
-    height: 255px;
-    text-align: center;
-    transform-origin: right bottom 0;
-    overflow: hidden;
+
+/* 手机端 */
+@media screen and (max-width: 767px) {
+  .header-content .header-search input{
+  	display: none;
+  }
+  .header-logo img:nth-child(1){
+	  display: none;
+  }
+  .header-meta{
+	  display: none;
+  }
+  .lgs{
+  	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+  }
+  .lgw{
+	  width: 100%;
+	  height: auto;
+  }
+  
 }
 
-.box .turntable span:nth-child(1) {
-    transform: rotate(45deg) skewY(45deg);
-}
 
-.box .turntable span:nth-child(2) {
-    transform: rotate(90deg) skewY(45deg);
-}
 
-.box .turntable span:nth-child(3) {
-    transform: rotate(135deg) skewY(45deg);
-}
-
-.box .turntable span:nth-child(4) {
-    transform: rotate(180deg) skewY(45deg);
-}
-
-.box .turntable span:nth-child(5) {
-    transform: rotate(225deg) skewY(45deg);
-}
-
-.box .turntable span:nth-child(6) {
-    transform: rotate(270deg) skewY(45deg);
-}
-
-.box .turntable span:nth-child(7) {
-    transform: rotate(-45deg) skewY(45deg);
-}
-
-.box .turntable span:nth-child(8) {
-    transform: rotate(0deg) skewY(45deg);
-}
-
-.box .turntable span div {
-    width: 100px;
-    height: 125px;
-    opacity: 1;
-    transform-origin: center center 0;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    transform: skewY(-45deg) rotate(-22.5deg) translate(3px, -62px);
-}
-
-.box .turntable span p {
-    font-size: 24px;
-    color: white;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}

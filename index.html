@@ -1,117 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<script src="./js/jquery.js"></script>
-<style>
-
-</style>
-
-<body>
-    <div class="box">
-        <div class="turntable"></div>
-        <div class="start"><i></i></div>
-    </div>
-    <script>
-        var arr = [{
-            p: '京东卡10元',
-            ind: 1
-        }, {
-            p: '京东卡20元',
-            ind: 2
-        }, {
-            p: '京东卡50元',
-            ind: 3
-        }, {
-            p: '京东卡100元',
-            ind: 4
-        }, {
-            p: '谢谢参与',
-            ind: 5
-        }, {
-            p: '京东卡200元',
-            ind: 6
-        }, {
-            p: '京东卡500元',
-            ind: 7
-        }, {
-            p: 'huawei',
-            ind: 8
-        }]
-
-        class turntable {
-            constructor(turntable, start, arr, number, second) {
-                this.turntabled = turntabled  //定义需要旋转的标签
-                this.start = start; //定义开始按钮
-                this.arr = arr //定义一个数组
-                this.number = number //定义一个旋转的圈数,默认为5
-                this.second = second //定义一个旋转的总时长,默认为6
-                this.angle = 0 //需要旋转的角度number圈+随机角度
-                this.num = 0 //定义一个随机角度
-                this.Certain = 0 //结果输出的第几个奖品
-                this.flag = true;
-            }
-            ined() {
-                this.spans();
-                this.clik()
-            }
-            spans() { //添加一个创建标签的方法,形参为需要添加的奖品数组
-                for (var i = 0; i < this.arr.length; i++) {
-                    let item = `<span>
-                        <div>
-                        <p>${this.arr[i].p}</p><img src="img/lottery_0${this.arr[i].ind}.png" alt="">
-                        </div>
-                            </span>`
-                        this.turntabled.append(item)
-                }
-            }
-            clik() { //添加一个点击事件的方法
-                this.start.click(() => { //开始转盘的点击事件
-                    if (this.flag) {
-                        this.flag = false
-                        this.Luckdraw() //调用旋转方法
-                        //第一个参数旋转圈数,默认为5,第二个参数旋转的总时长,默认为6 
-                        setTimeout(() => {
-                            this.flag = true
-                            this.getPrize()
-                        }, this.second * 1000)
-                    }
-                })
-            }
-            Luckdraw() { //添加一个抽奖方法
-                this.num = Number((Math.random() * 360).toFixed(0)) //随机角度
-                this.number === undefined ? this.number : 5 //圈数默认值
-                this.second === undefined ? this.second : 6 //秒速默认值
-                this.angle = -(360 * this.number + this.num) //需要旋转的角度number圈+随机角度
-                this.turntabled.css({
-                    'transition': `all ${this.second}s ease-in-out`,
-                    'transform': `rotate(${this.angle}deg)`
-                })
-            }
-            getPrize() { //弹出奖品的方法
-                this.Certain = Math.ceil(this.num / 45) - 1 //第几个奖品
-                if ((this.arr[this.Certain].p).length === 4) {
-                    alert(this.arr[this.Certain].p + '希望下次光临!')
-                } else {
-                    alert('恭喜你获得:' + this.arr[this.Certain].p + '!!!')
-                }
-                this.turntabled.css({
-                    'transition': '0s',
-                    'transform': `rotate(${this.angle%360}deg)`
-                })
-            }
-        }
-        let start = $('.start')
-        let turntabled = $('.turntable')
-        let turntables = new turntable(turntabled,start, arr, 4, 2);
-        turntables.ined()
-        console.log(turntables);
-    </script>
-</body>
-
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="./css/index.css">
+		<title>hermes爱马仕</title>
+	</head>
+	<body>
+		<div class="container-fluid box">
+			<header class="row header w-100 m-0">
+				<div class="header-meta w-100">
+					<a href="">联系我们</a>
+					<a href="">爱马仕专卖店</a>
+					<a href="">中国</a>
+				</div>
+				<div class="row header-content w-100 m-0">
+					<div class="col-4 header-search">
+						<div class="d-block navigation"><i class="fa fa-bars mx-2" aria-hidden="true"></i>目录</div>
+						<input type="text" name="" id="" value="" placeholder="搜索" class="" />
+					</div>
+					<div class="col-4">
+						<div class="header-logo">
+							<img class="w-100 d-md-block img-fluid d-sm-none" src="img/hermes-logo1.svg">
+							<img class="w-100 img-fluid d-md-none" src="img/hermes-logo2.svg">
+						</div>
+					</div>
+					<div class="col-4 header-icons">
+						<a href=""><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="d-md-block d-none">购物袋</span></a>
+						<a href="" class="mr-2"><i class="fa fa-user text-left" aria-hidden="true"></i><span class="d-md-block d-none mr-1">账户</span></a>
+					</div>
+				</div>
+			</header>
+			<div class="tray-scroll-wrap row w-100 h-100">
+				<div class="col-md-4 col-12 scrleft">
+					<div class="tray-content-wrapper">
+						<div class="shop"><i class="fa fa-times" aria-hidden="true"></i>目录</div>
+						<ul class="w-100">
+							<li>女士</li>
+							<li>男士</li>
+							<li>生活艺术</li>
+							<li>珠宝首饰</li>
+							<li>时尚首饰</li>
+							<li>钟表</li>
+							<li>香水</li>
+							<li>鞋履</li>
+							<li>箱包/小皮具</li>
+							<li>围巾/丝巾配饰</li>
+							<li>马术系列</li>
+							<li>领带与口袋巾</li>
+							<li>Petit h</li>
+							<li>阅读/书写</li>
+							<li>婴儿系列</li>
+							<li>
+								<hr>
+							</li>
+							<li>人力资源</li>
+						</ul>
+					</div>
+					<div class="institutional-nav-wrapper w-100">
+						<a href=""><i class="fa fa-map-marker mr-3" aria-hidden="true"></i>爱马仕专卖店</a>
+						<a href=""><i class="fa fa-user-o mr-3" aria-hidden="true"></i>账户</a>
+						<a href=""><i class="fa fa-commenting-o mr-3" aria-hidden="true"></i></i>联系我们</a>
+					</div>
+				</div>
+				<div class="col-md-8 col-0 scrright"></div>
+			</div>
+			<div class="container main text-center">
+				<div class="spectrum">
+					<div class="h2 mb-4">共谱恋曲</div>
+					<div class="mb-5">皮革手袋、丝巾、运动鞋为情人节臻选，为浪漫释爱。</div>
+					<img class="img-fluid" src="img/mains.jpg" alt="">
+				</div>
+				<div class="ballet ">
+					<div class="h2 mt-5">芭蕾舞姿</div>
+					<div class="m-3">配饰随旋律轻摇起舞，正如恋人相遇，一拍即合。 </div>
+					<a href="">点亮情人节</a>
+					<div class="row block-push  my-5">
+						<div class="col-lg-6 col-12 pt-5">
+							<img class="img-fluid w-100 d-block" src="img/top1.jfif">
+						</div>
+						<div class="col-lg-6 col-12">
+							<div class="row products ">
+								<div class="col-6">
+									<div class="lgs">
+										<img class="d-block w-100" src="img/top2.jfif">
+										<div class="w-100 h5">O'Maillon项链</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+									<div class="lgs">
+										<img class="d-block w-100" src="img/top3.jfif">
+										<div class="w-100 h5">ClicCadenas手镯</div>
+										<div class="w-100">¥5,400</div>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="lgs">
+										<img class="d-block w-100" src="img/top4.jfif">
+										<div class="w-100 h5">Marine袖扣</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+									<div class="lgs">
+										<img class="d-block w-100" src="img/top5.jfif">
+										<div class="w-100 h5">Talismans项链</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="heart ">
+					<div class="h2 mt-5">一触倾心</div>
+					<div class="m-3">真丝裹藏内在柔情：炙热的爱情，似微妙的化学反应。</div>
+					<a href="">怦然心动</a>
+					<div class="row block-push  my-5">
+						<div class="col-lg-6 col-12">
+							<div class="row products ">
+								<div class="col-6">
+									<div class="lgs">
+										<img class="d-block h-lg-100 lgw img-fluid" src="img/mid1.jfif">
+										<div class="w-100 h5">狂欢游行90方巾</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+									<div class="lgs">
+										<img class="d-block h-lg-100 lgw img-fluid" src="img/mid2.jfif">
+										<div class="w-100 h5">马镫混搭90方巾</div>
+										<div class="w-100">¥1,500</div>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="lgs">
+										<img class="d-block h-lg-100 lgw" src="img/mid3.jfif">
+										<div class="w-100 h5">Twilly小丝巾</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+									<div class="lgs">
+										<img class="d-block h-lg-100 lgw" src="img/mid4.jfif">
+										<div class="w-100 h5">几何花园90方巾</div>
+										<div class="w-100">¥5,400</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-12 pt-5">
+							<img class="img-fluid w-100 d-block" src="img/mid5.jfif">
+						</div>
+					</div>
+				</div>
+				<div class="unite">
+					<div class="h2 mt-5">永结同心</div>
+					<div class="m-3">从初识的青涩到情投意合，皮革配饰将爱的故事娓娓道来。</div>
+					<a href="">心心相印</a>
+					<div class="row block-push  my-5">
+						<div class="col-lg-6 col-12 pt-5">
+							<img class="w-100 d-block" src="img/mids1.jfif">
+						</div>
+						<div class="col-lg-6 col-12">
+							<div class="row products ">
+								<div class="col-6">
+									<div class="lgs">
+										<img class="d-block w-100" src="img/mids2.jfif">
+										<div class="w-100 h5">-Loop收纳袋</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+									<div class="lgs">
+										<img class="d-block w-100" src="img/mids3.jfif">
+										<div class="w-100 h5">Bearn短钱包</div>
+										<div class="w-100">¥5,400</div>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="lgs">
+										<img class="d-block w-100" src="img/mids4.jfif">
+										<div class="w-100 h5">Constance皮带扣</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+									<div class="lgs">
+										<img class="d-block w-100" src="img/mids5.jfif">
+										<div class="w-100 h5">Calvi卡包</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="story">
+					<div class="h2 mt-5">恋爱篇章</div>
+					<div class="m-3">鞋履轻巧相触，上演追逐游戏，驻足相依才是真正的开始。</div>
+					<a href="">浪漫共舞</a>
+					<div class="row block-push  my-5">
+						<div class="col-lg-6 col-12">
+							<div class="row products ">
+								<div class="col-6">
+									<div class="lgs">
+										<img class="d-block h-lg-100 lgw img-fluid" src="img/bot1.jfif">
+										<div class="w-100 h5">Addict运动鞋</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+									<div class="lgs">
+										<img class="d-block h-lg-100 lgw img-fluid" src="img/bot2.jfif">
+										<div class="w-100 h5">Aloha凉鞋</div>
+										<div class="w-100">¥1,500</div>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="lgs">
+										<img class="d-block h-lg-100 lgw" src="img/bot3.jfif">
+										<div class="w-100 h5">Oran凉鞋</div>
+										<div class="w-100">¥2,400</div>
+									</div>
+									<div class="lgs">
+										<img class="d-block h-lg-100 lgw" src="img/bot4.jfif">
+										<div class="w-100 h5">Addict运动鞋</div>
+										<div class="w-100">¥5,400</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-12 pt-5">
+							<img class="img-fluid w-100 d-block" src="img/bot5.jfif">
+						</div>
+					</div>
+				</div>
+				<div class="continued">
+					<div class="h2 mt-5">未完待续</div>
+					<div class="m-3">标志性手袋、珍贵珠宝成就情人节美妙的宠溺。</div>
+					<a href="" class="my-4 d-block">施展魔法</a>
+					<div class="row">
+						<div class="col-lg-3 col-6">
+							<div class="lgs">
+								<img class="d-block h-lg-100 lgw" src="img/foot1.jfif">
+								<div class="w-100 h5">爱马仕奥德赛方巾</div>
+								<div class="w-100">¥5,400</div>
+							</div>
+							<div class="lgs">
+								<img class="d-block h-lg-100 lgw" src="img/foot2.jfif">
+								<div class="w-100 h5">爱马仕橘彩女士淡香氛</div>
+								<div class="w-100">¥5,400</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-6">
+							<div class="lgs">
+								<img class="d-block h-lg-100 lgw" src="img/foot3.jfif">
+								<div class="w-100 h5">Heure H腕表</div>
+								<div class="w-100">¥5,400</div>
+							</div>
+							<div class="lgs">
+								<img class="d-block h-lg-100 lgw" src="img/foot4.jfif">
+								<div class="w-100 h5">异域之蓝马克杯2件套</div>
+								<div class="w-100">¥5,400</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-6">
+							<div class="lgs">
+								<img class="d-block h-lg-100 lgw" src="img/foot5.jfif">
+								<div class="w-100 h5">Jet手镯</div>
+								<div class="w-100">¥5,400</div>
+							</div>
+							<div class="lgs">
+								<img class="d-block h-lg-100 lgw" src="img/foot6.jfif">
+								<div class="w-100 h5">爱马仕大地男士香氛</div>
+								<div class="w-100">¥5,400</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-6">
+							<div class="lgs">
+								<img class="d-block h-lg-100 lgw" src="img/foot7.jfif">
+								<div class="w-100 h5">西班牙马克杯2件套</div>
+								<div class="w-100">¥5,400</div>
+							</div>
+							<div class="lgs">
+								<img class="d-block h-lg-100 lgw" src="img/foot8.jfif">
+								<div class="w-100 h5">Val d'Isere软帽</div>
+								<div class="w-100">¥5,400</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="foots container-fluid row text-center">
+				<div class="container">
+					<div class="help">
+						<div class="row">
+							<div class="col-sm-12 col-lg-6 my-5">
+								<div class="h5 mt-5">需要帮助吗？</div>
+								<div class="mb-4">您或许可以在常见问题中找到答案。<br>也可以联系我们：</div>
+								<div>客服中心 400 090 6610</div>
+								<div>周一至周日: 12:00PM - 5:00PM</div>
+							</div>
+							<div class="col-sm-12 col-lg-6 my-5">
+								<div class="h5 mt-5">查询附近的专卖店</div>
+								<div class="mb-4">爱马仕专卖店</div>
+								<div class="my-3 h5">电子营业执照</div>
+								<div>点击查看</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="h4 my-2 mt-5">及时得到最新资讯</div>
+						<div class="my-2">订阅爱马仕电子报，探索我们的故事、产品和每一次惊喜。</div>
+						<div class="bottoms">订阅</div>
+						<div class="row text-left">
+							<div class="col-sm-12 col-lg-6">
+								<div class="row foot-left">
+									<div class="col-6">
+										<div>服务</div>
+										<div>联系我们</div>
+										<div>常见问题</div>
+										<div>爱马仕专卖店</div>
+										<div>礼物</div>
+									</div>
+									<div class="col-6">
+										<div>购物帮助</div>
+										<div>付款</div>
+										<div>配送</div>
+										<div>专卖店取货</div>
+										<div>物流查询</div>
+										<div>换货及退货</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-lg-6">
+								<div class="row foot-left">
+									<div class="col-6">
+										<div>爱马仕品牌</div>
+										<div>可持续发展</div>
+										<div>人力资源</div>
+										<div>财务通报新标签</div>
+										<div>爱马仕基金会新标签</div>
+										<div>集团旗下其他品牌</div>
+									</div>
+									<div class="col-6">
+										<div>法律信息</div>
+										<div>法律条款</div>
+										<div>隐私政策</div>
+										<div>BCR</div>
+										<div>电子营业执照</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-bott">
+						<div class="titleft"><a href="">中国</a>© 爱马仕 2020 版权所有</div>
+						<div class="titright"><i class="fa fa-weixin" aria-hidden="true"></i><i class="fa fa-weibo" aria-hidden="true"></i>
+						</div>
+						<div><a href=""> 沪ICP备17032469号-2 </a>
+							<a href="">沪公网安备 31010602002693号</a></div>
+						<img class="img-fluid imds" src="img/hermes-logo1.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
 </html>
