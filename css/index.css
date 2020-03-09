@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 1000px;
+    height: 700px;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+    border: 2px #ccc solid;
+    border-radius: 20px;
+}
+
+.box .turntable {
+    width: 510px;
+    height: 510px;
+    border-radius: 50%;
+    margin: 99px auto;
+    background: url(../img/bg_lottery_f.png);
+    position: relative;
+    overflow: hidden;
+    border: 10px solid rgb(27, 74, 112);
+    transition: all 5s ease-in-out;
+}
+
+.box .start {
+    position: absolute;
+    width: 131px;
+    height: 131px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: url(../img/btn_lottery.png) no-repeat center/100% 100%;
+}
+
+.box .start i {
+    background: url(../img/icon_point.png);
+    position: absolute;
+    width: 41px;
+    height: 39px;
+    left: 42.5px;
+    top: -32px;
+}
+
+.box .turntable span {
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    text-align: center;
+    transform-origin: right bottom 0;
+    overflow: hidden;
+}
+
+.box .turntable span:nth-child(1) {
+    transform: rotate(45deg) skewY(45deg);
+}
+
+.box .turntable span:nth-child(2) {
+    transform: rotate(90deg) skewY(45deg);
+}
+
+.box .turntable span:nth-child(3) {
+    transform: rotate(135deg) skewY(45deg);
+}
+
+.box .turntable span:nth-child(4) {
+    transform: rotate(180deg) skewY(45deg);
+}
+
+.box .turntable span:nth-child(5) {
+    transform: rotate(225deg) skewY(45deg);
+}
+
+.box .turntable span:nth-child(6) {
+    transform: rotate(270deg) skewY(45deg);
+}
+
+.box .turntable span:nth-child(7) {
+    transform: rotate(-45deg) skewY(45deg);
+}
+
+.box .turntable span:nth-child(8) {
+    transform: rotate(0deg) skewY(45deg);
+}
+
+.box .turntable span div {
+    width: 100px;
+    height: 125px;
+    opacity: 1;
+    transform-origin: center center 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    transform: skewY(-45deg) rotate(-22.5deg) translate(3px, -62px);
+}
+
+.box .turntable span p {
+    font-size: 24px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
