@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>about</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mode.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css">
+		<script src="../js/jquery.js"></script>
+	</head>
+	<style type="text/css">
+		main{height: 100%;background:white;position: relative;top:-10px;overflow: hidden;}
+		main>.cont{width: 1100px;height: auto;background: white;padding: 20px 0;margin-top: 60px;margin-left: 60%;opacity: 0;}
+		main>.cont>h1{font-size: 52px;color: #DAA520;font-family: arial;font-weight: 700;text-align: center;margin: 20px 0;}
+		main>.cont>h1>span{color: #555;}
+		main>.cont>div{height: 24px;width: 300px;font-family: 幼圆;text-align: center;color: #333;font-size: 18px;position: relative;margin: 30px auto;}
+		main>.cont>div::before{display: block;width: 35px;height: 2px;background: #DAA520;content: '';position: absolute;left: 25px;top: 12px;}
+		main>.cont>div::after{display: block;width: 35px;height: 2px;background: #DAA520;content: '';position: absolute;right: 25px;top: 12px;}
+		main>.cont>ul{width: 1100px;height: 615px;margin: 0 auto;}
+		main>.cont>ul>li{float: left;width: 352px;height: 185px;margin: 12px 6px;background: wheat;border-radius: 10px;cursor: pointer;position: relative;}
+		main>.cont>ul>li>img{display: block;width: 100%;height: 100%;border-radius: 10px;}
+		main>.cont>ul>li>a{width: 100%;height: 100%;text-align: center;line-height: 185px;color: white;background: #DAA520;position: absolute;top: 0;font-size: 22px;opacity: 0;transition: all 1s ease;}
+		main>.cont>ul>li:hover>a{opacity: 0.8;}
+	</style>
+	<body>
+
+		<div class="box container-fluid">
+			<main>
+				<div class="cont">
+					<h1><span>MY</span>ORTFOLIO</h1>
+					<div>我的往期作品展示</div>
+					<ul>
+						<li><img src="../imgs/ff1.webp" alt=""><a href="">设计作品</a></li>
+						<li><img src="../imgs/ff2.webp" alt=""><a href="">设计作品</a></li>
+						<li><img src="../imgs/ff3.webp" alt=""><a href="">设计作品</a></li>
+						<li><img src="../imgs/ff4.webp" alt=""><a href="">设计作品</a></li>
+						<li><img src="../imgs/ff5.webp" alt=""><a href="">设计作品</a></li>
+						<li><img src="../imgs/ff6.webp" alt=""><a href="">设计作品</a></li>
+						<li><img src="../imgs/ff7.webp" alt=""><a href="">设计作品</a></li>
+						<li><img src="../imgs/ff8.webp" alt=""><a href="">设计作品</a></li>
+						<li><img src="../imgs/ff9.webp" alt=""><a href="">设计作品</a></li>
+					</ul>
+				</div>
+			</main>
+
+			<div class="fidx-left">
+				<img src="../imgs/logo.webp" alt="" width="90px" height="25px">
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="about.html">关于</a></li>
+					<li><a href="" style="color: #DAA520;">作品集</a></li>
+					<li><a href="blog.html">博客</a></li>
+					<li><a href="contactme.html">联系</a></li>
+				</ul>
+			</div>
+
+		</div>
+<script>
+	$(function(){
+		$('.cont').animate({'margin':'60px auto 0 21%','opacity':'1'},1000)
+	})
+</script>
+	</body>
+	<script src="../js/mode.js"></script>
+	<script src="../js/swiper.min.js"></script>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>blog</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mode.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css">
+		<script src="../js/jquery.js"></script>
+	</head>
+	<style type="text/css">
+		main{height: 100%;background:white;position: relative;top:-10px;overflow: hidden;}
+		main>.cont{width: 1100px;height: 600px;background: white;padding: 20px 0;margin-left: 1500px;margin-top: 80px;opacity: 0;}
+		main>.cont>h1{font-size: 52px;color: #DAA520;font-family: arial;font-weight: 700;text-align: center;margin: 20px 0;}
+		main>.cont>h1>span{color: #555;}
+		main>.cont>div{height: 24px;width: 300px;font-family: 幼圆;text-align: center;color: #333;font-size: 18px;position: relative;margin: 50px auto;}
+        main>.cont>div:nth-child(2)::before{display: block;width: 35px;height: 2px;background: #DAA520;content: '';position: absolute;left: 20px;top: 12px;}
+        main>.cont>div:nth-child(2)::after{display: block;width: 35px;height: 2px;background: #DAA520;content: '';position: absolute;right: 20px;top: 12px;}
+		main>.cont>ul{width: 400px;height: auto;background: white;float: left;}
+		main>.cont>ul>li{height: 70px;width: 400px;background: white;margin: 20px 0;font-size: 16px;color: #000;font-family: 微软雅黑;transition: all .5s ease;}
+		main>.cont>ul>li>span{line-height: 40px;color: #555;}
+		main>.cont>ul>li>p{position: relative;text-indent: 2em;}
+		main>.cont>ul>li>p::before{content: '\260E';width: 20px;height: 20px;position: absolute;left: -27px;top: 0px;color: #DAA520;}
+		main>.cont>.ris{width: 666px;height: 300px;background: white;float: right;margin-top: 0px;}
+		main>.cont>ul>li:last-child{margin-top: 60px;}
+		main>.cont>ul>li:last-child>span{width: 32px;height: 32px;margin-right: 10px;background: blanchedalmond;display: inline-block;border-radius: 10px;}
+		main>.cont>ul>li:last-child>span:nth-child(1){background: url(../imgs/social_icon_32x32.png) -32px 0;}
+		main>.cont>ul>li:last-child>span:nth-child(2){background: url(../imgs/social_icon_32x32.png)}
+		main>.cont>ul>li:last-child>span:nth-child(3){background: url(../imgs/social_icon_32x32.png) -64px 0;}
+		main>.cont>ul>li:last-child>span:nth-child(4){background: url(../imgs/social_icon_32x32.png) -160px 0;}
+		main>.cont>.ris>p{text-align: left;color: #555;font-size: 15px;line-height: 30px;}
+		main>.cont>.ris>div{display: inline-block;float: left;margin: 20px 5px;}
+		main>.cont>.ris>div>textarea{outline: none;width: 666px;height: 160px;border-radius: 50px;border: 1px #CCCCCC solid;padding: 20px;color: black;font-size: 14px;}
+		main>.cont>.ris>div>input{width: 322px;height: 56px;border-radius: 50px;border: 1px #CCCCCC solid;font-size: 14px;outline: none;color: #292929;text-indent: 1em;}
+		main>.cont>.ris>div>div{width: 130px;height: 24px;background: #D64A49;text-align: center;color: white;font-size: 13px;line-height: 24px;margin: 5px;display: none;}
+		main>.cont>.ris>div>div::before{content: '\26A0';}
+	    main>.cont>.ris>input:last-child{outline: none;width: 170px;height: 53px;border: 2px #DAA520 solid;margin: 10px 20px;display: inline-block;line-height: 50px;text-align: center;font-size: 14px;background: #DAA520;color: white;transition: all .5s ease;border-radius: 30px;float: left;}
+	    main>.cont>.ris>input:last-child:hover{background: #8C8C8C;border: 2px #8C8C8C solid;color: white;}
+	
+	
+	</style>
+	<body>
+
+		<div class="box container-fluid">
+			<main>
+				<div class="cont">
+					<h1><span>CONTACT</span>ME</h1>
+					<div>您可以随时联系我</div>
+					<ul>
+						<li><span>电话</span><p>+86 188 2356 2356</p></li>
+						<li><span>邮箱</span><p>qifeiye@admin.com</p></li>
+						<li><span>传真</span><p>+0086 5566 6857</p></li>
+						<li><span>地址</span><p>苏州市中新大道加成大厦</p></li>
+						<li>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</li>
+					</ul>
+				 <form class="ris" method="get" action="javascript:void(0)">
+					 <p>如果您有任何建议、商业合作，甚至想说声“ Hello ..”，<br>请填写下面的表格，我会尽快给您答复。</p>
+					 <div><input type="text" placeholder="姓名" class="names"><div class="te1">这是一个必填项哦</div></div>
+					 <div><input type="text" placeholder="邮件" class="emails"><div class="te2">这是一个必填项哦</div></div>
+					 <div><textarea placeholder="内容" style="height: 160px;" class="bigtext"></textarea><div class="te3">这是一个必填项哦</div></div>
+					 <input type="submit" name="" id="gets" value="提交   " />
+				 </form>
+				</div>
+			</main>
+
+			<div class="fidx-left">
+				<img src="../imgs/logo.webp" alt="" width="90px" height="25px">
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="about.html">关于</a></li>
+					<li><a href="myportfolio.html">作品集</a></li>
+					<li><a href="blog.html">博客</a></li>
+					<li><a href="" style="color: #DAA520;">联系</a></li>
+				</ul>
+			</div>
+
+		</div>
+<script>
+	$(function(){
+		
+		$('.cont').animate({'margin-left':'400px','opacity':'1'},1000)
+	    $('#gets').click(function(){
+			if($('.names').val() == ''){  //姓名点击事件
+				$('.te1').show()
+			}else{
+				$('.te1').hide()
+			}
+		})
+		$('#gets').click(function(){
+			if( $('.emails').val() == ''){    //邮件点击事件
+				$('.te2').show()
+			}else{
+				$('.te2').hide()
+			}
+		})
+		$('#gets').click(function(){     //大文本框点击事件
+			if($('.bigtext').val() == ''){
+				$('.te3').show()
+			}else{
+				$('.te3').hide()
+			}
+		})
+		$('#gets').click(function(){     //登录成功事件
+			if($('.bigtext').val() != '' && $('.emails').val() != '' && $('.names').val() != ''){
+				setTimeout(function(){
+				  alert('登录成功')	
+				},1000)
+				
+			}
+		})
+	})
+</script>
+	</body>
+	<script src="../js/mode.js"></script>
+	<script src="../js/swiper.min.js"></script>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>blog</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mode.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css">
+		<script src="../js/jquery.js"></script>
+	</head>
+	<style type="text/css">
+		main{height: 100%;background:white;position: relative;top:-10px;overflow: hidden;}
+		main>.cont{width: 1200px;height: 600px;background: white;padding: 20px 0;margin: 50px 0px 50px 1300px;opacity: 0;}
+		main>.cont>h1{font-size: 52px;color: #DAA520;font-family: arial;font-weight: 700;text-align: center;margin: 20px 0;}
+		main>.cont>h1>span{color: #555;}
+		main>.cont>div{height: 24px;width: 300px;font-family: 幼圆;text-align: center;color: #333;font-size: 18px;position: relative;margin: 30px auto 100px auto;}
+        main>.cont>div:nth-child(2)::before{display: block;width: 35px;height: 2px;background: #DAA520;content: '';position: absolute;left: -30px;top: 12px;}
+        main>.cont>div:nth-child(2)::after{display: block;width: 35px;height: 2px;background: #DAA520;content: '';position: absolute;right: -30px;top: 12px;}
+		main>.cont>.banners{width: 1080px;height: 350px;background: white;overflow: hidden;position: relative;}
+		main>.cont>.banners>ul{height: 350px;width: 3360px;background: white;position: relative;left: 0px;}
+		main>.cont>.banners>ul>li{height: 345px;width: 520px;float: left;margin-right: 40px;background: red;border-radius: 10px;overflow: hidden;position: relative;}
+		main>.cont>.banners>ul>li>img{display: block;width: 100%;height: 100%;border-radius: 10px;transition: all 1s ease;}
+		main>.cont>.banners>ul>li:hover>img{transform: scale(1.1,1.1);}
+		main>.cont>.banners>ul>li>div{width: 520px;height: 100px;background: white;position: absolute;bottom: -2px;border-radius: 0px;opacity: 0;transition: all .5s ease;cursor: pointer;}
+		main>.cont>.banners>ul>li>div>p{width: 100%;height: 100%;text-align: left;padding:24px 20px;border: 1px #DAA520 solid;transition: all .5s ease;font-size: 18 px;font-family: 黑体;}
+		main>.cont>.banners>ul>li>div>p>span{color: #555;font-size: 14px;}
+		main>.cont>.banners>ul>li:hover>div{opacity: .9;}
+		main>.cont>.banners>ul>li:hover>div>p{transform: scale(.9,.8);}
+		main>.cont>.banners>div:nth-child(1){width: 40px;height: 40px;background: #555555;position: absolute;top:45%;line-height: 40px;text-align: center;color: white;font-weight: bold;cursor: pointer;z-index: 10;}
+		main>.cont>.banners>div:nth-child(2){width: 40px;height: 40px;background: #DAA520;position: absolute;top:45%;right: 0;line-height: 40px;text-align: center;color: white;font-weight: bold;cursor: pointer;z-index: 10;}
+	</style>
+	<body>
+
+		<div class="box container-fluid">
+			<main>
+				<div class="cont">
+					<h1><span>BL</span>OG</h1>
+					<div>有关网页设计和开发的技巧</div>
+					<div class="banners">
+						<div class="left"><</div>
+						<div class="right">></div>
+						<ul>
+							<li><img src="../imgs/bs1.webp" alt=""><div><p>掘千亿车载导航市场<br><span>2019 12-17</span></p></div></li>
+							<li><img src="../imgs/bs2.webp" alt=""><div><p>全面采用云服务器<br><span>2019 12-17</span></p></div></li>
+							<li><img src="../imgs/bs3.webp" alt=""><div><p>双面屏连接微信大生态<br><span>2019 12-17</span></p></div></li>
+							<li><img src="../imgs/bs4.webp" alt=""><div><p>新消费智慧营销峰会<br><span>2019 12-17</span></p></div></li>
+							<li><img src="../imgs/bs5.webp" alt=""><div><p>千岛湖启用睿沃智能<br><span>2019 12-17</span></p></div></li>
+							<li><img src="../imgs/bs6.webp" alt=""><div><p>怎么用数据思维做设计<br><span>2019 12-17</span></p></div></li>
+						</ul>
+					</div>
+				</div>
+			</main>
+
+			<div class="fidx-left">
+				<img src="../imgs/logo.webp" alt="" width="90px" height="25px">
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="about.html">关于</a></li>
+					<li><a href="myportfolio.html">作品集</a></li>
+					<li><a href="" style="color: #DAA520;">博客</a></li>
+					<li><a href="contactme.html">联系</a></li>
+				</ul>
+			</div>
+
+		</div>
+<script>
+	$(function(){
+		var num = 0
+		var s = 0
+		var times = setInterval(funs,5000)
+		
+		function funs(){
+			if($('.banners').find('ul').is(':animated')){
+				return
+			}
+				num++
+				if(num>4){
+				   num=0
+				}
+			$('.banners').find('ul').animate({'left':-num*560+'px'},1000)
+		}
+
+		$('.banners').hover(function(){    //banners的鼠标移出移出的效果，关闭开启定时器。
+			clearInterval(times)
+		},function(){
+			times = setInterval(funs,5000)
+		})
+		
+		$('.left').click(function(){  //左边点击事件
+		if($('.banners').find('ul').is(':animated')){
+			return
+		}
+             num--
+			if(num<0){
+			   num=4
+			}
+			$('.banners').find('ul').animate({'left':-num*560+'px'},1000)
+		})
+		$('.right').click(function(){   //右边点击事件
+		
+			funs()
+		})
+		
+		$('.cont').animate({'margin-left':'18%','opacity':'1'},1000)
+	})
+</script>
+	</body>
+	<script src="../js/mode.js"></script>
+	<script src="../js/swiper.min.js"></script>
+
+</html>

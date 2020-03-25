@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    canvas{
+        display: block;
+        margin: 100px auto;
+        border: 1px skyblue solid;
+    }
+</style>
+<body>
+    <canvas width="600px" height="600px" id="canvas"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('canvas')
+
+    var context = canvas.getContext('2d')
+
+    context.beginPath()
+	context.moveTo(50,20)
+	context.lineTo(50,580)
+	context.strokeStyle = '#006DA3'
+	context.stroke()
+	context.closePath()
+	
+	
+	context.beginPath()
+	context.moveTo(20,300)
+	context.lineTo(550,300)
+	context.strokeStyle = '#006DA3'
+	context.stroke()
+	context.closePath()
+	
+	context.beginPath()
+	context.moveTo(40,40)
+	context.lineTo(50,20)
+	context.lineTo(60,40)
+	context.strokeStyle = 'salmon'
+	context.stroke()
+	context.closePath()
+	
+	context.beginPath()
+	context.font = '30px 黑体'
+	context.fillStyle = '#E08700'
+	context.fill()
+	context.fillText('x',530,330)
+	context.closePath()
+	
+	context.beginPath()
+	context.font = '30px 黑体'
+	context.fillStyle = '#E08700'
+	context.fill()
+	context.fillText('y',60,30)
+	context.closePath()
+	
+	context.beginPath()
+	context.moveTo(530,290)
+	context.lineTo(550,300)
+	context.lineTo(530,310)
+	context.strokeStyle = '#AE6AB0'
+	context.stroke()
+	context.closePath()
+	
+	var num = 40
+	for(var i=0;i<11;i++){
+		num +=40
+		context.beginPath()
+		context.moveTo(0 + num,290)
+		context.lineTo(0 + num,300)
+		context.strokeStyle = '#006DA3'
+		context.stroke()
+		context.closePath()
+	}
+	
+	var num1 = 40
+	
+	for(var j=0;j<14;j++){
+		
+		num1 +=40
+		context.beginPath()
+		context.moveTo(50,640 - num1)
+		context.lineTo(60,640 - num1)
+		context.strokeStyle = '#006DA3'
+		context.stroke()
+		context.closePath()
+		
+		
+	}
+	
+	var nums1 = 0
+	var num1s = 40
+	for(var x=0;x<6;x++){
+		nums1++
+		num1s +=40
+		context.beginPath()
+		context.font = '20px 黑体'
+		context.fillStyle = '#E08700'
+		context.fill()
+		context.fillText(nums1,10,365 - num1s)
+		context.closePath()
+		}
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+     header{width: 600px;height: 300px;border: 1px #000000 solid;margin: 100px auto;}
+     div.tet{width: 0px;overflow: hidden;height: 55px;margin: 50px 0;border: 1px #000000 solid;}
+     div.tet>p{width: 400px;font-size: 50px;height: 100%;font-family: 黑体;color: yellow;padding: 0;margin: 0;}
+	</style>
+	<body>
+		<header>
+			<div class="tet"> <p></p> </div>
+
+		</header>
+
+
+		<script>
+			var num = 0
+			var num1 = 0
+			var arr1 = ['您', '身', '边', '交', '互', '设', '计', '者']
+			var arr2 = ['我', '是', '一', '设', '计', '工', '作', '师']
+			var res = [arr1, arr2]
+			var time1
+			var time2
+
+
+
+			time1 = setInterval(funs, 200)
+
+			function funs() {
+				num++
+				if (num > 7) {
+					clearInterval(time1)
+					setTimeout(function() {
+						time2 = setInterval(func, 100)
+					}, 1000)
+					num1++
+				}
+				if (num1 > 1) {
+					num1 = 0
+				}
+				$('.tet').css('width', '400px')
+				$('p').append(res[num1][num - 1])
+			}
+
+			function func() {
+				num--
+				if (num < 0) {
+					num = 0
+					$('p').html('')
+					clearInterval(time2)
+					time1 = setInterval(funs, 200)
+				}
+				$('.tet').css('width', (num * 50) + 'px')
+			}
+		</script>
+	</body>
+	<script src="js/jquery.js"></script>
+</html>
