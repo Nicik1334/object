@@ -1,0 +1,282 @@
+.main {
+	width: 100%;
+	height: auto;
+	background: white;
+}
+
+.banner {
+	background: url(../imgs/03-banners.jpg) no-repeat center/100% 100%;
+	height: 500px;
+	width: 100%;
+}
+
+.nav {
+	height: 90px;
+	background: #F1F1F1;
+	margin: 0 auto;
+	color: #000000;
+	width: 100%;
+	z-index: 100;
+}
+
+.nav>h4 {
+	width: 265px;
+	height: 90px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	display: block;
+}
+
+.nav>h4>a {
+	line-height: 90px;
+	font-size: 18px;
+	color: #333;
+	cursor: pointer;
+}
+
+.nav>h4:hover>a {
+	color: #dc1e32;
+	border-bottom: 3px red solid;
+}
+
+.nav>h4:hover>ul {
+	display: block;
+}
+
+.nav>h4>ul {
+	position: absolute;
+	top: 90px;
+	left: 10px;
+	width: 254px;
+	height: 200px;
+	background: white;
+	display: none;
+}
+
+.nav>h4>ul>li {
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.nav>h4>ul>li:hover {
+	background: red;
+}
+
+.mids {
+	width: 1280px;
+	height: 1225px;
+	background: white;
+	margin: 0 auto;
+}
+
+.mids>li:nth-child(2) {
+	margin: 52px 52px 0 52px;
+}
+
+.mids>li:nth-child(5) {
+	margin: 52px 52px 0 52px;
+}
+
+.mids>li {
+	width: 392px;
+	height: 539px;
+	background: white;
+	float: left;
+	margin-top: 52px;
+}
+
+.mids>li>img {
+	width: 392px;
+	height: 239px;
+}
+
+.mids>li>div {
+	width: 392px;
+	height: 300px;
+	background: #f1f1f1;
+	position: relative;
+}
+
+.mids>li>div>a {
+	display: block;
+	background: white;
+	height: 102px;
+	position: absolute;
+	top: -51px;
+	left: 50%;
+	margin-left: -51px;
+	cursor: default;
+	width: 102px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 130px;
+	color: red;
+}
+
+.mids>li>div>a>span {
+	display: block;
+	height: 26px;
+	width: 26px;
+	background: url(../imgs/yy-01.png) no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -13px;
+	margin-top: 20px;
+}
+
+.mids>li>div>h5 {
+	font-size: 18px;
+	color: #333;
+	padding-top: 78px;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	text-align: center;
+}
+
+.mids>li>div>p {
+	font-size: 14px;
+	color: #333;
+	line-height: 24px;
+	padding: 0 20px;
+}
+
+.mids>li>div>div {
+	display: block;
+	width: 233px;
+	height: 44px;
+	border: 1px solid #333;
+	line-height: 44px;
+	color: #333;
+	position: absolute;
+	bottom: 45px;
+	left: 75px;
+	text-align: center;
+	text-indent: -44px;
+	background: url(../imgs/a_rlink_gray.png) no-repeat right;
+}
+
+.mids>li:hover>div>a {
+	background: lightcoral;
+	color: white;
+	transition: all 1s ease;
+}
+
+.mids>li:hover>div>div {
+	background: url(../imgs/a_rlink_gray.png) no-repeat right lightcoral;
+	color: white;
+	transition: all 1s ease;
+}
+
+
+.mid {
+	width: 1280px;
+	height: 634px;
+	background: white;
+	margin: 0 auto;
+	display: none;
+}
+
+.mid>li:nth-child(2) {
+	margin: 52px 52px 0 52px;
+}
+
+.mid>li {
+	width: 392px;
+	height: 539px;
+	background: white;
+	float: left;
+	margin-top: 52px;
+}
+
+.mid>li>img {
+	width: 392px;
+	height: 239px;
+}
+
+.mid>li>div {
+	width: 392px;
+	height: 300px;
+	background: #f1f1f1;
+	position: relative;
+}
+
+.mid>li>div>a {
+	display: block;
+	background: white;
+	height: 102px;
+	position: absolute;
+	top: -51px;
+	left: 50%;
+	margin-left: -51px;
+	cursor: default;
+	width: 102px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 130px;
+	color: red;
+}
+
+.mid>li>div>a>span {
+	display: block;
+	height: 26px;
+	width: 26px;
+	background: url(../imgs/yy-01.png) no-repeat;
+	position: absolute;
+	left: 50%;
+	margin-left: -13px;
+	margin-top: 20px;
+}
+
+.mid>li>div>h5 {
+	font-size: 18px;
+	color: #333;
+	padding-top: 78px;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	text-align: center;
+}
+
+.mid>li>div>p {
+	font-size: 14px;
+	color: #333;
+	line-height: 24px;
+	padding: 0 20px;
+}
+
+.mid>li>div>div {
+	display: block;
+	width: 233px;
+	height: 44px;
+	border: 1px solid #333;
+	line-height: 44px;
+	color: #333;
+	position: absolute;
+	bottom: 45px;
+	left: 75px;
+	text-align: center;
+	text-indent: -44px;
+	background: url(../imgs/a_rlink_gray.png) no-repeat right;
+}
+
+.mid>li:hover>div>a {
+	background: lightcoral;
+	color: white;
+	transition: all 1s ease;
+}
+
+.mid>li:hover>div>div {
+	background: url(../imgs/a_rlink_gray.png) no-repeat right lightcoral;
+	color: white;
+	transition: all 1s ease;
+}
+
+.main>.next{
+	margin-left: 45%;
+	width: 200px;
+}
+

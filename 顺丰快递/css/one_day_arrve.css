@@ -1,0 +1,265 @@
+.main {
+	height: auto;
+	background: white;
+	padding: 0;
+}
+
+.banner {
+	background: url(../imgs/-004.jpg) no-repeat center/100% 100%;
+	height: 500px;
+	width: 100%;
+}
+
+.main>.nav {
+	height: 90px;
+	background: #F1F1F1;
+	margin: 0 auto;
+	color: #000000;
+	text-align: center;
+	padding: 0 23%;
+	width: 100%;
+	z-index: 100;
+	transition: all 1s ease;
+}
+
+.nav>div {
+	background: url(../imgs/a_line.png) no-repeat right center;
+	padding-top: 30px;
+}
+
+.nav>div>a {
+	color: #333;
+	padding-bottom: 5px;
+	font-weight: 700;
+	border-bottom: 2px solid #F1F1F1;
+	font-size: 20px;
+	width: auto;
+	height: 32px;
+}
+
+.nav>div:nth-child(1)>a {
+	border-bottom: 2px solid red;
+}
+
+.nav>div>a:hover {
+	border-bottom: 2px solid red;
+}
+
+.alls>.one {
+	width: 1400px;
+	height: auto;
+	background: white;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	z-index: 20;
+	top: 0;
+}
+
+.alls>.one>h1 {
+	padding-top: 50px;
+}
+
+.alls>.one>.topr {
+	width: 100%;
+	height: auto;
+	margin-left: 0px;
+	line-height: 24px;
+	position: relative;
+	margin-top: 130px;
+	z-index: 1;
+}
+
+.alls>.one>.topr>div {
+	background: white;
+	margin: 0 auto;
+	color: black;
+	border: 4px solid #f1f1f1;
+}
+
+.alls>.one>.topr>div>img {
+	position: absolute;
+	top: -60px;
+	width: 109px;
+	height: 109px;
+	left: 50%;
+	margin-left: -54px;
+}
+
+.alls>.one>.topr>div>h2 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 50px;
+	padding: 100px 0 25px 0;
+}
+
+.alls>.two {
+	width: 800px;
+	height: auto;
+	background: white;
+	display: none;
+	margin: 0 auto;
+}
+
+.alls>.two>h1 {
+	padding-top: 50px;
+}
+
+.alls>.two>.topr {
+	width: 100%;
+	height: auto;
+	margin-left: 0px;
+	line-height: 24px;
+	position: relative;
+	margin-top: 130px;
+}
+
+.alls>.two>.topr>div {
+	background: white;
+	margin: 0 auto;
+	color: black;
+	border: 4px solid #f1f1f1;
+}
+
+.alls>.two>.topr>div>img {
+	position: absolute;
+	top: -60px;
+	width: 109px;
+	height: 109px;
+	left: 50%;
+	margin-left: -54px;
+}
+
+.alls>.two>.topr>div>h2 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 50px;
+	padding: 100px 0 25px 0;
+}
+
+.alls>.three {
+	width: 800px;
+	height: auto;
+	background: white;
+	display: none;
+	margin: 0 auto;
+}
+
+.alls>.three>h1 {
+	padding-top: 50px;
+}
+
+.alls>.three>.topr {
+	width: 100%;
+	height: auto;
+	margin-left: 0px;
+	line-height: 24px;
+	position: relative;
+	margin-top: 130px;
+}
+
+.alls>.three>.topr>div {
+	background: white;
+	margin: 0 auto;
+	color: black;
+	border: 4px solid #f1f1f1;
+}
+
+.alls>.three>.topr>div>img {
+	position: absolute;
+	top: -60px;
+	width: 109px;
+	height: 109px;
+	left: 50%;
+	margin-left: -54px;
+}
+
+.alls>.three>.topr>div>h2 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 50px;
+	padding: 100px 0 25px 0;
+}
+
+.alls>.four {
+	width: 800px;
+	height: auto;
+	background: white;
+	display: none;
+	margin: 0 auto;
+}
+
+.alls>.four>h1 {
+	padding-top: 50px;
+}
+
+.alls>.four>.topr {
+	width: 100%;
+	height: auto;
+	margin-left: 0px;
+	line-height: 24px;
+	position: relative;
+	margin-top: 130px;
+}
+
+.alls>.four>.topr>div {
+	background: white;
+	margin: 0 auto;
+	color: black;
+	border: 4px solid #f1f1f1;
+}
+
+.alls>.four>.topr>div>img {
+	position: absolute;
+	top: -60px;
+	width: 109px;
+	height: 109px;
+	left: 50%;
+	margin-left: -54px;
+}
+
+.alls>.four>.topr>div>h2 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 50px;
+	padding: 100px 0 25px 0;
+}
+
+.tent {
+	width: 100%;
+	background: #f1f1f1;
+	margin-top: 60px;
+	margin-bottom: 75px;
+	padding: 34px 20%;
+	height: 120px;
+}
+
+.tent>a {
+	height: 55px;
+	line-height: 55px;
+	background: #dc1e32;
+	float: left;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	padding: 0 10px;
+	display: block;
+}
+
+.tent>div {
+	float: right;
+	font-size: 16px;
+	color: #000;
+	margin-top: 15px;
+	height: 30px;
+}
+
+.tent>div>a {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url(../imgs/left_link_icon.png) no-repeat center/100% 100%;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-left: 10px;
+}

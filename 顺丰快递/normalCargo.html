@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>我要寄件</title>
+		<link rel="icon" href="imgs/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.js"></script>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalCargo.css" />
+	<link rel="import" href="header.html" id="nav1">
+	<link rel="import" href="footer.html" id="foot">
+	<body>
+		<div class="box container-fluid">
+
+			<div class="headers"></div>
+
+			<div class="main">
+				<div class="nav">
+					<a href="javascript:void(0)">我要寄件</a>
+					<a href="javascript:void(0)">运单追踪</a>
+					<a href="javascript:void(0)">服务支持</a>
+				</div>
+				<div class="mids">
+					<div class="top">
+						<a href="javascript:void(0)">寄快递</a>
+						<a href="javascript:void(0)">寄大件(20kg+)</a>
+						<a href="javascript:void(0)">二维码寄件</a>
+					</div>
+					<div class="bot">
+						<ul class="bots">
+							<li class="reds">
+								<strong>01</strong>
+								<i></i>
+								<p>寄件人信息</p>
+							</li>
+							<li>
+								<strong>02</strong>
+								<i></i>
+								<p>收件人信息</p>
+							</li>
+							<li>
+								<strong>03</strong>
+								<i></i>
+								<p>预约信息</p>
+							</li>
+							<li>
+								<strong>04</strong>
+								<i></i>
+								<p>完成下单</p>
+							</li>
+						</ul>
+						<ul class="divs">
+							<li class="bt1">
+								<p>寄方信息<span>标 * 为必填项</span><a href="">使用地址簿</a><a href="">智能地址填写</a></p>
+								<div class="form-group">
+									<div class="left">
+										<span>*姓名</span>
+										<input type="text" name="" id="" value="" placeholder="请填写联系人姓名" class="xm" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+									<div class="right">
+										<span>公司名称</span>
+										<input type="text" name="" id="" value="" placeholder="请输入公司名称" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*手机号码</span>
+										<input type="text" name="" id="" value="" placeholder="请填写手机号码" class="sj" onkeyup="value=value.replace(/[^\d\.\-]/g,'')" />
+										<div class="tips" style="width: 250px;">
+											<div class="triangle"><em></em></div>
+											您输入的手机号码格式不正确，请重新输入。
+										</div>
+										<div class="tips tipss" style="width: 250px;">
+											<div class="triangle"><em></em></div>
+											手机号码、固话号码请至少填写一项
+										</div>
+									</div>
+									<div class="right">
+										<span>固话</span>
+										<input type="text" name="" id="" value="" placeholder="请输入固定电话" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*省市区</span>
+										<input type="text" name="" id="" value="" placeholder="请选择所在地区，例如：广东省－深圳市－福田区" class="wz" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*详细地址</span>
+										<input type="text" name="" id="" value="" placeholder="请填写所在街道以及详细地址" class="dz" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-danger btn-lg Next">下一步</button>
+							</li>
+							<li class="bt2">
+								<p>寄方信息<span>标 * 为必填项</span><a href="">使用地址簿</a><a href="">智能地址填写</a></p>
+								<div class="form-group">
+									<div class="left">
+										<span>*姓名</span>
+										<input type="text" name="" id="" value="" placeholder="请填写联系人姓名" class="xms" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+									<div class="right">
+										<span>公司名称</span>
+										<input type="text" name="" id="" value="" placeholder="请输入公司名称" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*手机号码</span>
+										<input type="text" name="" id="" value="" placeholder="请填写手机号码" onkeyup="value=value.replace(/[^\d\.\-]/g,'')"
+										 class="sjs" />
+										<div class="tips" style="width: 250px;">
+											<div class="triangle"><em></em></div>
+											手机号码、固话号码请至少填写一项
+										</div>
+									</div>
+									<div class="right">
+										<span>固话</span>
+										<input type="text" name="" id="" value="" placeholder="请输入固定电话" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*省市区</span>
+										<input type="text" name="" id="" value="" placeholder="请选择所在地区，例如：广东省－深圳市－福田区" class="wzs" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*详细地址</span>
+										<input type="text" name="" id="" value="" placeholder="请填写所在街道以及详细地址" class="dzs" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn btn-light step">上一步</button>
+								<button type="button" class="btn btn-danger btn-lg Next">下一步</button>
+							</li>
+							<li class="bt3">
+								<span>
+									<h4>预约信息</h4><input type="radio" name="one" id="" value="" />&nbsp;&nbsp;快递员上门取件&nbsp;&nbsp;<input type="radio"
+									 name="one" id="" value="" checked="checked" />&nbsp;自行联系快递员或自寄
+								</span>
+								<p>下单成功后请自行打印电子运单，快递小哥上门直接取件，寄件更方便高效！</p>
+								<h6>快递产品</h6>
+								<div><a href="">￥&nbsp;<span>23</span>&nbsp;起<p>预计周二 18:00 前</p></a>
+									<a href="">￥&nbsp;<span>18</span>&nbsp;起<p>预计周二 18:00 前</p></a></div>
+								<h5><span class="good"></span>我同意<a href="" class="text-danger">《电子运单契约条款》</a></h5>
+								<button type="button" class="btn btn-light step">上一步</button>
+								<button type="button" class="btn btn-danger btn-lg Next">下一步</button>
+							</li>
+							<li>
+								<h1>完成下单！</h1>
+								<img src="imgs/timg%20(2).jpg" alt="">
+								<img src="imgs/timg%20(1).jpg" alt="">
+								<button type="button" class="btn btn-danger step">上一部</button>
+							</li>
+						</ul>
+					</div>
+					<div class="bot1">
+						<div class="bot2">
+							<img src="imgs/heavyCargo_sc.png" alt="" width="100%" height="106px">
+							<div>
+								<p>寄方信息<span>标 * 为必填项</span><a href="">使用地址簿</a><a href="">智能地址填写</a><a href="">价格计算</a></p>
+								<div class="form-group">
+									<div class="left">
+										<span>*姓名</span>
+										<input type="text" name="" id="" value="" placeholder="请填写联系人姓名" class="xm" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+									<div class="right">
+										<span>公司名称</span>
+										<input type="text" name="" id="" value="" placeholder="请输入公司名称" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*手机号码</span>
+										<input type="text" name="" id="" value="" placeholder="请填写手机号码" class="sj" onkeyup="value=value.replace(/[^\d\.\-]/g,'')" />
+										<div class="tips" style="width: 250px;">
+											<div class="triangle"><em></em></div>
+											手机号码、固话号码请至少填写一项
+										</div>
+									</div>
+									<div class="right">
+										<span>固话</span>
+										<input type="text" name="" id="" value="" placeholder="请输入固定电话" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*省市区</span>
+										<input type="text" name="" id="" value="" placeholder="请选择所在地区，例如：广东省－深圳市－福田区" class="wz" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*详细地址</span>
+										<input type="text" name="" id="" value="" placeholder="请填写所在街道以及详细地址" class="dz" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bot2">
+							<div>
+								<p>收方信息<span>标 * 为必填项</span><a href="">使用地址簿</a><a href="">智能地址填写</a></p>
+								<div class="form-group">
+									<div class="left">
+										<span>*姓名</span>
+										<input type="text" name="" id="" value="" placeholder="请填写联系人姓名" class="xm" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+									<div class="right">
+										<span>公司名称</span>
+										<input type="text" name="" id="" value="" placeholder="请输入公司名称" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*手机号码</span>
+										<input type="text" name="" id="" value="" placeholder="请填写手机号码" class="sj" onkeyup="value=value.replace(/[^\d\.\-]/g,'')" />
+										<div class="tips" style="width: 250px;">
+											<div class="triangle"><em></em></div>
+											手机号码、固话号码请至少填写一项
+										</div>
+									</div>
+									<div class="right">
+										<span>固话</span>
+										<input type="text" name="" id="" value="" placeholder="请输入固定电话" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*省市区</span>
+										<input type="text" name="" id="" value="" placeholder="请选择所在地区，例如：广东省－深圳市－福田区" class="wz" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="left">
+										<span>*详细地址</span>
+										<input type="text" name="" id="" value="" placeholder="请填写所在街道以及详细地址" class="dz" />
+										<div class="tips">
+											<div class="triangle"><em></em></div>
+											这是必填字段
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bst">
+							<a href="">保存到地址簿</a><br>
+							<h5><span class="good"></span>我同意<a href="" class="text-danger">《电子运单契约条款》</a></h5>
+							<button type="button" class="btn btn-danger btn-lg" id='plays'>下单</button><br>
+							<b class="text-danger pb-5">重货包裹均需保价，点击了解</b>
+						</div>
+					</div>
+					<div class="bot-last">
+						<h3>有扫码寄件<a href="">纸质运单</a></h3>
+						<ul>
+							<li><span>01</span>
+								<p>输入纸质二维码上的运单号</p>
+							</li>
+							<li><span>02</span>
+								<p>填写寄件信息</p>
+							</li>
+							<li><span>03</span>
+								<p>将包裹与二维码交给收派员</p>
+							</li>
+						</ul>
+						<input type="text" class="fl" name="billNumber" placeholder="请输入运单号以开始">
+						<button class="fl primary-btn square big" type="submit">下一步</button>
+						<p>温馨提示：此方式下单不会通知快递员上门取件。如需快递员及时上门收件，<br>请使用“寄快递”下单或联系快递员。</p>
+					</div>
+				</div>
+				<div class="mids-m">
+					<div class="top">
+						<input type="text" class="token-input" autocomplete="off" placeholder="输入运单号进行查询，单次最多查询20条。请以逗号、空格或回车键隔开" id="1578305892980131-tokenfield"
+						 tabindex="0" style="min-width: 90px; width: 542px;">
+						<span type="button" class="primary-button" data-loading-text="查询中...">查询</span>
+					</div>
+					<h5>我的包裹</h5>
+					<ul class="tabk">
+						<li>我寄的</li>
+						<li>我收的</li>
+						<li>批量订单</li>
+					</ul>
+					<div class="bog">
+						<img src="imgs/sf-empty.png" alt="">
+						<p>暂无运单，登录/注册会员可查询更多运单</p>
+						<button type="button" class="btn btn-danger">登录/注册</button>
+						<div><img src="imgs/order-button-icon.gif" alt="">免费预约上门取件</div>
+					</div>
+				</div>
+				<div class="mids-r">
+					<div class="hede"></div>
+					<div class="nas mx-auto p-2">
+						<div class="tops pt-2 pb-4">
+							<span>常用功能</span>
+							<div class="text-left">
+								<a href=""><img src="imgs/icons/icons/flag-fill.svg" alt="">运费时效</a>
+								<a href=""><img src="imgs/icons/icons/Flag.svg" alt="">服务范围</a>
+								<a href=""><img src="imgs/icons/icons/Eye-fill.svg" alt="">网点查询</a>
+								<a href=""><img src="imgs/icons/icons/Eye-slash-fill.svg" alt="">收寄标准</a>
+							</div>
+							<p class="text-center updom">收起更多服务
+								<img src="imgs/icons/icons/Chevron-compact-down.svg" alt="" class="imgtwo">
+								<img src="imgs/icons/icons/Chevron-compact-up.svg" alt="" class="imgone"></p>
+
+						</div>
+						<div class="hide text-left">
+							<a href=""><img src="imgs/icons/icons/Camera-video-fill.svg" alt="">汇率查询</a>
+							<a href=""><img src="imgs/icons/icons/Camera-video.svg" alt="">代收货款账单</a>
+							<a href=""><img src="imgs/icons/icons/Camera.svg" alt="">代收货款对账</a>
+							<a href=""><img src="imgs/icons/icons/Cloud.svg" alt="">常用表格</a>
+							<a href=""><img src="imgs/icons/icons/Cone-striped.svg" alt="">理赔</a>
+							<a href=""><img src="imgs/icons/icons/Cone.svg" alt="">清关服务</a>
+							<a href=""><img src="imgs/icons/icons/Diamond.svg" alt="">无着件公示</a>
+						</div>
+						<div class="midd">
+							<h4>热门问题</h4>
+							<ul class="w-100">
+								<li>
+									<img src="imgs/s1x.png" alt="">
+									<h5 class="p-2">个人会员等级说明</h5>
+
+									<p class="p-1">&nbsp;积分好礼，会员好货</p>
+								</li>
+								<li>
+									<img src="imgs/s8x.png" alt="">
+
+									<h5 class="p-2">月结客户权益介绍</h5>
+									<p class="p-1">&nbsp;按月度一次性结算快递...</p>
+								</li>
+							</ul>
+						</div>
+						<div class="bott">
+							<h4>其他寄件方式</h4>
+							<ul class="w-100">
+								<li>
+									<img src="imgs/s7x.png" alt="">
+									<h5 class="p-2">顺丰微信公众号</h5>
+									<p class="p-1">&nbsp;最便捷的顺丰速运自助...</p>
+								</li>
+								<li>
+									<img src="imgs/s6x.png" alt="">
+									<h5 class="p-2">速运通App客户端</h5>
+									<p class="p-1">&nbsp;专业的个人快件管理软...</p>
+								</li>
+								<li>
+									<img src="imgs/s5x.png" alt="">
+									<h5 class="p-2">速打</h5>
+									<p class="p-1">&nbsp;服务于线下商家的打单...</p>
+								</li>
+								<li>
+									<img src="imgs/s4x.png" alt="">
+									<h5 class="p-2">国际件下单系统</h5>
+									<p class="p-1">&nbsp;国际件客户的自助服务...</p>
+								</li>
+								<li>
+									<img src="imgs/s8x.png" alt="">
+									<h5 class="p-2">顺丰月结服务平台</h5>
+									<p class="p-1">&nbsp;针对中小月结客户的一...</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="footers"></div>
+
+
+		</div>
+		<script src="js/header.js"></script>
+		<script src="js/normalCargo.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>

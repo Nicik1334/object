@@ -1,0 +1,194 @@
+.main {
+	width: 100%;
+	height: auto;
+	background: white;
+}
+
+.banner {
+	background: url(../imgs/04-banenr.jpg) no-repeat center/100% 100%;
+	height: 500px;
+	width: 100%;
+}
+
+.main>.nav {
+	height: 90px;
+	background: #F1F1F1;
+	margin: 0 auto;
+	color: #000000;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	padding: 0 20%;
+	transition: all 1s ease;
+}
+
+.main>.nav>div {
+	background: url(../imgs/a_line.png) no-repeat right center;
+	padding-top: 30px;
+	margin-left: 25px;
+}
+
+.main>.nav>div>a {
+	color: #333;
+	font-weight: 700;
+	border-bottom: 2px solid #F1F1F1;
+	width: auto;
+	height: 32px;
+	font-size: 20px;
+}
+
+.main>.nav>div:nth-child(1)>a {
+	border-bottom: 2px solid red;
+}
+
+.main>.nav>div>a:hover {
+	border-bottom: 2px solid red;
+}
+
+.nav-alls>div {
+	margin: 0 auto;
+	transition: all 1s ease;
+}
+
+.nav-one {
+	width: 1280px;
+	height: auto;
+	background: white;
+	padding-bottom: 200px;
+}
+
+.nav-one>h1 {
+	text-align: center;
+	line-height: 100px;
+}
+
+.nav-one>p {
+	margin: 30px 0;
+	line-height: 24px;
+}
+
+.nav-one>p>span {
+	color: red;
+}
+
+.nav-two {
+	width: 960px;
+	height: 1500px;
+	background: white;
+	display: none;
+}
+
+.nav-two>h1 {
+	text-align: center;
+	line-height: 120px;
+}
+
+.nav-two>p {
+	float: left;
+	line-height: 20px;
+	width: 100%;
+}
+
+.nav-two>p>a {
+	float: right;
+	color: red;
+}
+
+.nav-two>p>a:hover {
+	text-decoration: inherit;
+}
+
+.nav-three {
+	width: 960px;
+	height: 1300px;
+	background: white;
+	display: none;
+}
+
+.nav-three>h1 {
+	text-align: center;
+	line-height: 120px;
+}
+
+.nav-three>p {
+	float: left;
+	line-height: 20px;
+	width: 100%;
+}
+
+.nav-three>p>a {
+	float: right;
+	color: red;
+}
+
+.nav-three>p>a:hover {
+	text-decoration: inherit;
+}
+
+.nav-three>span {
+	width: 130px;
+	height: 45px;
+	float: right;
+	line-height: 45px;
+	background: #F1F1F1;
+	text-align: center;
+	margin: 20px 0;
+	display: block;
+}
+
+.nav-four {
+	width: 1280px;
+	height: 550px;
+	background: white;
+	display: none;
+}
+
+.nav-four>h1 {
+	text-align: center;
+	line-height: 120px;
+}
+
+.nav-four>p {
+	float: left;
+	line-height: 20px;
+	width: 100%;
+}
+
+.nav-four>p>a {
+	float: right;
+	color: red;
+}
+
+.nav-four>p>a:hover {
+	text-decoration: inherit;
+}
+
+.nav-five {
+	width: 1280px;
+	height: 340px;
+	background: white;
+	display: none;
+	position: relative;
+}
+
+.nav-five>h1 {
+	text-align: center;
+	line-height: 180px;
+}
+
+.nav-five>div {
+	line-height: 30px;
+}
+
+.nav-five>.qb {
+	width: 130px;
+	height: 45px;
+	float: right;
+	line-height: 45px;
+	background: #F1F1F1;
+	text-align: center;
+	margin: 20px 0;
+	position: absolute;
+	right: 150px;
+	top: 95px;
+}
